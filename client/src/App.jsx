@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import './App.css';
 import Dashboard from './pages/Dashboard';
+import Employees from './pages/Employees';
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -16,6 +17,9 @@ function AppRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/dashboard" element={
         <ProtectedRoute><Dashboard /></ProtectedRoute>
+      } />
+      <Route path="/employees" element={
+        <ProtectedRoute><Employees /></ProtectedRoute>
       } />
       <Route path="/" element={<Navigate to="/dashboard" />} />
     </Routes>

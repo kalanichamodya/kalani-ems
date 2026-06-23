@@ -39,7 +39,7 @@ export default function Dashboard() {
         </div>
         <nav className="dash-nav">
           <button className="dash-nav-item active">Dashboard</button>
-          <button className="dash-nav-item">Employees</button>
+          <button className="dash-nav-item" onClick={() => window.location.href = '/employees'}>Employees</button>
           <button className="dash-nav-item">Attendance</button>
           <button className="dash-nav-item">Leave</button>
           <button className="dash-nav-item">Salary</button>
