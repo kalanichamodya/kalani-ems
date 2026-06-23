@@ -114,7 +114,8 @@ export default function Employees() {
         <nav className="dash-nav">
           <button className="dash-nav-item" onClick={() => window.location.href = '/dashboard'}>Dashboard</button>
           <button className="dash-nav-item active">Employees</button>
-          <button className="dash-nav-item">Attendance</button>
+          <button className="dash-nav-item" onClick={() => window.location.href = '/attendance'}>Attendance</button>
+          <button className="dash-nav-item" onClick={() => window.location.href = '/monthly-report'}>Monthly report</button>
           <button className="dash-nav-item">Leave</button>
           <button className="dash-nav-item">Salary</button>
         </nav>
@@ -128,6 +129,7 @@ export default function Employees() {
           </div>
           <button className="emp-add-btn" onClick={openAddModal}>+ Add employee</button>
           <button className="emp-icon-btn" onClick={() => openEditModal(emp)}>Edit</button>
+          <button className="dash-nav-item" onClick={() => window.location.href = '/attendance'}>Attendance</button>
         </div>
 
         <div className="emp-filters">

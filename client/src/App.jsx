@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import './App.css';
 import Dashboard from './pages/Dashboard';
 import Employees from './pages/Employees';
+import Attendance from './pages/Attendance';
+import MonthlyReport from './pages/MonthlyReport';
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -20,6 +22,12 @@ function AppRoutes() {
       } />
       <Route path="/employees" element={
         <ProtectedRoute><Employees /></ProtectedRoute>
+      } />
+      <Route path="/attendance" element={
+        <ProtectedRoute><Attendance /></ProtectedRoute>
+      } />
+      <Route path="/monthly-report" element={
+        <ProtectedRoute><MonthlyReport /></ProtectedRoute>
       } />
       <Route path="/" element={<Navigate to="/dashboard" />} />
     </Routes>
