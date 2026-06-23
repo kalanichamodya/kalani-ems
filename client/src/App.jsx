@@ -2,17 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
 import './App.css';
-
-function Dashboard() {
-  const { user, logout } = useAuth();
-  return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Welcome, {user?.name}!</h1>
-      <p>Role: {user?.role}</p>
-      <button onClick={logout}>Logout</button>
-    </div>
-  );
-}
+import Dashboard from './pages/Dashboard';
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
